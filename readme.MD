@@ -8,20 +8,16 @@ Every time you restart your computer or reopen VSCode, you'll have to do a few t
 
 - Activate your virtual environment for this project: 
    
-    macOS/Linux: `source venv/bin/activate`
-    
-    Windows: `venv\Scripts\activate.bat`
+    source venv/Scripts/activate
 
 - Point Flask to your application: 
 
     macOS/Linux:  `export FLASK_APP=main.py`
     
-    Windows: `set FLASK_APP=main.py`
 - Enable hot reloading, debug mode, and other useful features for local development:  
 
      macOS/Linux: `export FLASK_ENV=development`
-
-    Windows: `set FLASK_ENV=development`
+     
 - run your flask application: 
 
     `flask run`

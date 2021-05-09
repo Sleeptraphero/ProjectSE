@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+    <section class="faq-banner" id="faq-home">
+        <div class="faq-imgSidebar">
+          <img src="https://lh3.googleusercontent.com/pw/ACtC-3dCPrkK7u8S1eJqjaYVwE_oOBjHNjXFxya73nvES_8_oKn2q5vHgf9VO8dbAz4tr9R0wRibo3Y_KJPqKXSd7qu9kxkursTvqpWvzflqBY8Sv_IMi3k_4Tbgtl9HKoB252NSY81BXjXFoWihv2Nsm_ms=w266-h270-no?authuser=0">
+        </div>
+        <div class="faq-contentBx">
+          <h2>FAQ</h2>
+          <p>Find answers to recurring questions and concerns about Monero.</p>
+          <button class="accordion">Basics</button>
+          <div class="panel">
+            <ol>
+              <li>
+                <h3>Cryptocurrency</h3>
+                <p>A cryptocurrency is a digital or virtual currency that is secured by cryptography, which makes it nearly impossible to counterfeit or double-spend. Many cryptocurrencies are decentralized networks based on blockchain technology—a distributed ledger enforced by a disparate network of computers. A defining feature of cryptocurrencies is that they are generally not issued by any central authority, rendering them theoretically immune to government interference or manipulation.
+              </p>
+            </li>
+            <li>
+              <h3>Wallet</h3>
+              <p>
+                A wallet is a physical medium, device, program or service used by cryptocurrency holders to store (multiple) public and/or private keys.
+                Wallets are used to track ownership and to receive and spend cryptocurrencies. The cryptocurrency itself is not “contained” inside a wallet - the wallet interacts with the blockchain to access the coins.
+              </p>
+            </li>
+            <li>
+              <h3>Cryptocurrency exchange</h3>
+              <p>A cryptocurrency exchange, or a digital currency exchange, is a business that allows customers to trade cryptocurrencies or digital currencies for other assets, such as conventional fiat money or other digital currencies.
+              </p>
+            </li>
+            <li></li>
+            </ol>
+          </div>
+          <button class="accordion">Mining Monero</button>
+          <div class="panel">
+            <ol>
+              <li><p>Monero is a cryptocurrency that relies on <a href="https://en.wikipedia.org/wiki/Proof_of_work" style="display: inline;">proof-of-work</a> mining to achieve distributed consensus. </p></li>
+              <li><h3>Hash Rate</h3><p>
+                Mining is a time-based competition. Therefore, the higher the device's processing speed, the luckier and merrier the mining process would be. Here mining pools come into play an XMR mining pool comprises individual rig owners who combine their rigs' power to increase their chances of finding new blocks in the Monero blockchain. Block rewards go to those who contributed mining power towards finding a particular block.</p></li>
+              <li><h3>Mining Rewards</h3>
+                <p>The current reward for verifying (mining)   1 transaction block is around 4.99 XMR, plus a transaction fee of 0.06573 XMR.
+                A Monero block is mined every 2 minutes, and we know that the current reward for mining transaction block is 4.99 XMR. So, by doing the simple math, we know that 1 XMR is mined every 24 seconds.</p>
+              </li>
+              <li></li>
+            </ol>
+          </div>
+          <button class="accordion">Nodes</button>
+          <div class="panel">
+            <ol>
+              <li>
+                <h3>Nodes</h3>
+                <p>Nodes are an important part of the Monero network infrastructure. Nodes simply store a copy of the blockchain. They can optionally be configured to share this information with other nodes and clients. Running a node is the only way to get the highest level of privacy and security when connecting to the Monero network. In Monero, the program for running a full node is called the “daemon”.</p>
+              </li>
+              <li>
+                <p>Running a full node will use a decent amount of storage (currently ~30GB, increasing over time) and bandwidth. It will likely take several days to sync the entire blockchain from scratch, even if you have fast hard drive and a fast connection. The amount of bandwidth used will vary based on your internet speed and other settings. The commands to configure these settings are at the end of the guide. Monthly bandwidth use can vary from about one hundred gigabytes per month to several terabytes.
+                </p>
+              </li>
+              <li><a href="https://www.monero.how/how-to-run-monero-node" style="text-align: center;">Monero-Node setup guide</a></li>
+            </ol> 
+          </div>
+          <button class="accordion">Encyrption (simplyfied)</button>
+          <div class="panel">
+            <p>The Monero protocol obfuscates the 3 parts of any cryptocurrency transaction – the sender, the receiver and the amount sent. Let’s see how this is done for each part.</p>
+            <ol>
+              <li>
+                <h3>Obfuscating the sender</h3>
+                <p>To obfuscate the sender’s identity, when he or she signs a Monero transaction, their signature is combined with past signatures from the Monero blockchain. These act as decoys and make it impossible for an outside observer to determine who actually sent the transaction.</p>
+              </li>
+              <li><h3>Obfuscating the amount sent</h3>
+                <p>The amount being sent is obfuscated by ring confidential transaction or ringCT for short. I won’t go into the technical aspect of how ringCT works, but suffice to say that instead of broadcasting the actual amount being sent, the user transmits only a small random looking piece of information. This information is enough to verify that the amount being sent is legit while keeping the actual amount private.</p></li>
+                <li>
+                  <h3>Obfuscating the receiver</h3>
+                  <p>Finally, we want to obfuscate the receiver. This is done through the use of stealth addresses. A public Monero address is a 95 character string that starts with a 4. However, when I send funds to that address the funds are actually sent to a different address.</p>
+                </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        });
+      }
+    </script>
+</body>
+
+{% endblock %}  

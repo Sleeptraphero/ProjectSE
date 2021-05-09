@@ -1,4 +1,4 @@
-from great_project.website import app
+from what_is_Monero.website import app
 
 
 def test_index():

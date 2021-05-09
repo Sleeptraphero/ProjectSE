@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+    <section class="banner" id="home">
+      <div class="imgSidebar">
+        <img src="https://lh3.googleusercontent.com/pw/ACtC-3dCPrkK7u8S1eJqjaYVwE_oOBjHNjXFxya73nvES_8_oKn2q5vHgf9VO8dbAz4tr9R0wRibo3Y_KJPqKXSd7qu9kxkursTvqpWvzflqBY8Sv_IMi3k_4Tbgtl9HKoB252NSY81BXjXFoWihv2Nsm_ms=w266-h270-no?authuser=0">
+      </div>
+      <div class="contentBx">
+        <h5 class="logoText"></h5>
+        <div>
+          <h2>MONERO</h2>
+          <h4>secure, private, untraceable</h4>
+          <p>Monero is a cryptocurrency focused on privacy. Transactions on the Monero blockchain can’t be tracked or traced. Monero uses a proof of work consensus algorithm to issue new coins and secure transactions.</p>
+          <a href="javascript:smoothScroll('intro')" class="btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+    <section class="intro" id="intro">
+      <div class="title white">
+        <h2>A Private Digital Currency</h2>
+      </div>
+      <div class="content">
+        <div class="textBx">
+          <h2 class="fh2">A Brief History</h2>
+          <p> Monero was launched in April 2014. It was a fair, pre-announced launch of the CryptoNote reference code. There was no premine or instamine, and no portion of the block reward goes to development. See the original Bitcointalk thread here. The founder, thankful_for_today, proposed some controversial changes that the community disagreed with. A fallout ensued, and the Monero Core Team forked the project with the community following this new Core Team. This Core Team has provided oversight since. Monero has made several large improvements since launch. The blockchain was migrated to a different database structure to provide greater efficiency and flexibility, minimum ring signature sizes were set so that all transactions were private by mandate, and RingCT was implemented to hide the transaction amounts. Nearly all improvements have provided improvements to security or privacy, or they have facilitated use. Monero continues to develop with goals of privacy and security first, ease of use and efficiency second.</p>
+          <h2>How is Monero’s privacy different from other coins?</h2>
+          <p>
+            Monero uses three different privacy technologies: ring signatures, ring confidential transactions (RingCT), and stealth addresses. These hide the sender, amount, and receiver in the transaction, respectively. All transactions on the network are private by mandate; there is no way to accidentally send a transparent transaction. This feature is exclusive to Monero. You do not need to trust anyone else with your privacy.</p>
+            <h2>Monero in-depth</h2>
+          <a href="https://web.getmonero.org/library/Zero-to-Monero-2-0-0.pdf" class="btn">Whitepaper</a>
+          <a href="https://github.com/monero-project/research-lab" class="btn">Github Repository</a>
+        </div>
+        <div class="imgBx">
+          <img src="https://blockchain-hero.com/wp-content/uploads/marktkapitalisierung-von-monero-xmr-erreicht-2-jahreshoch.jpg">
+        </div>
+      </div>
+    </section>  
+    <section class="wiMonero" id="wiMonero">
+      <div class="title">
+        <h2>What is Monero (XMR)?</h2>
+        <p></p>
+      </div>
+      <div class="content">
+        <div class="wiMoneroBx">
+          <img src="https://www.getmonero.org/img/crypto-lock.png">
+          <h2>Private and censorship-resistant transactions</h2>
+          <p>The majority of existing cryptocurrencies, including Bitcoin and Ethereum, have transparent blockchains. Transactions can be verified and/or traced by anyone in the world. Monero, on the other hand, uses various privacy-enhancing technologies to ensure the anonymity of its users.</p>
+        </div>
+        <div class="wiMoneroBx">
+          <img src="https://www.getmonero.org/img/monero-classified.png">
+          <h2>Monero transactions are confidential and untraceable</h2>
+          <p>The sender, receiver, and amount of every single transaction are hidden through the use of three important technologies: Stealth Addresses, Ring Signatures, and RingCT. Because every transaction is private, Monero cannot be traced. This makes it a true, fungible currency. </p>
+        </div>
+        <div class="wiMoneroBx">
+          <img src="https://www.getmonero.org/img/monero-electronic-cash.png">
+          <h2>Monero is electronic cash</h2>
+          <p> With Monero, there are no wire transfer or check clearing fees, no multi-day holding periods, and no fraudulent chargebacks. Because Monero is decentralized, it is not constrained by any particular legal jurisdiction and provides safety from capital control.</p>
+        </div>
+        <div class="wiMoneroBx">
+          <img src="https://www.getmonero.org/img/academic-growth.png">
+          <h2>Monero is a grassroots community</h2>
+          <p>The Monero Project is at the forefront of cryptocurrency privacy and security. Its Research Lab and Development Team are constantly working on new, innovative technologies. Since its launch, the project has received contributions from over 500 developers located all around the world.</p>
+        </div>
+        <div class="wiMoneroBx">
+          <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/mining-20-539200.png">
+          <h2>Monero offers smart mining</h2>
+          <p>Smart mining is the process of having a throttled miner mine when it otherwise does not cause drawbacks. The intent of smart mining is to increase network security by allowing as many people as possible to let the smart miner on all the time.</p>
+        </div>
+        <div class="wiMoneroBx">
+          <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/scalability-1492970-1264676.png">
+          <h2>Scalability</h2>
+          <p>The size of Monero blocks is flexible, formulas determine how the reward miners receive interacts with the number of transactions they choose to include in blocks. The blockchain can therefore scale to meet changes in transaction volume.</p>
+        </div>
+      </div>
+      <div>
+        <img class="center-img" src="https://media.anycoindirect.eu/mkt/guides/coin-header/what-is-monero-xmr.jpg">
+      </div>
+    </section>
+    <section class="newslt" id="newslt">
+      <div class="title white">
+        <h2>Newsletter</h2>
+        <p>Sign up for the most awesome news all around Monero</p>
+      </div>
+      <form action="/create" id=userform method="post" onsubmit="validateForm()">
+        <div class="newsltForm">
+          <div class="row">
+            <div class="col50">
+              <input type="text" name="fname" placeholder="First Name">
+            </div>
+            <div class="col50">
+              <input type="text" name="lname" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col50">
+              <input type="text" name="email" placeholder="Email">
+            </div>
+            <div class="col50">
+              <input type="text" name="mobile" placeholder="Mobile No.">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col100">
+              <textarea id="userform" placeholder="Message"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col100">
+              <input type="submit" value="Send">
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    </div>
+</body>
+{% endblock %}  

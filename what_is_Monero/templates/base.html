@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title> {{ page_title }}</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<header>
+    <div class="container" id="top">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/FAQ">FAQ</a></li>
+          <li><a href="javascript:smoothScroll('newslt')">Newsletter</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="toggle" onclick="toggleMenu();"></div>
+    <div class="sidebar">
+      <ul class="menu">
+        <li><a href="javascript:smoothScroll('top')" onclick="toggleMenu();">Home</a></li>
+        <li><a href="https://web.getmonero.org/library/Zero-to-Monero-2-0-0.pdf" onclick="toggleMenu();">Whitepaper</a></li>
+        <li><a href="/FAQ" onclick="toggleMenu();">FAQ</a></li>
+        <li><a href="javascript:smoothScroll('newslt')" onclick="toggleMenu();">Newsletter</a></li>
+      </ul>
+</header>
+<body>
+        {% block content%} {% endblock %}
+</body>
