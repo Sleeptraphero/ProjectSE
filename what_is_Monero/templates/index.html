@@ -82,27 +82,27 @@
         <h2>Newsletter</h2>
         <p>Sign up for the most awesome news all around Monero</p>
       </div>
-      <form action="/create" id=userform method="post" onsubmit="validateForm()">
+      <form action="/newsletter" id="msg" method="post">
         <div class="newsltForm">
           <div class="row">
             <div class="col50">
-              <input type="text" name="fname" placeholder="First Name">
+              <input type="text" name="fname" id="fname" placeholder="First Name">
             </div>
             <div class="col50">
-              <input type="text" name="lname" placeholder="Last Name">
+              <input type="text" name="lname" id="lname" placeholder="Last Name">
             </div>
           </div>
           <div class="row">
             <div class="col50">
-              <input type="text" name="email" placeholder="Email">
+              <input type="text" name="email" id="email" placeholder="Email">
             </div>
             <div class="col50">
-              <input type="text" name="mobile" placeholder="Mobile No.">
+              <input type="integer" name="mobile" id="mobile" placeholder="Mobile No.">
             </div>
           </div>
           <div class="row">
             <div class="col100">
-              <textarea id="userform" placeholder="Message"></textarea>
+              <textarea id="msg" name="msg" placeholder="Message" ></textarea>
             </div>
           </div>
           <div class="row">

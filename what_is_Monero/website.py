@@ -1,12 +1,11 @@
 from flask import Flask
 from flask import render_template
 from flask import request
+import sqlite3
 
 app = Flask(__name__)
 
-# configure Flask using environment variables
 app.config.from_pyfile("config.py")
-
 
 @app.route('/')
 def index():
@@ -16,19 +15,26 @@ def index():
 def first_page():
     return render_template('FAQ.html', page_title="What is Monero?")
 
-
-@app.route('/create', methods=['POST'])
+@app.route('/newsletter', methods=['POST'])
 def create_user():
     try:
-        fname = request.form.get("fname")
-        lname = request.form.get("lname")
-        email = request.form.get("email")
-        mobile = request.form.get("mobile")
-        message = request.form.get("message")
-        return render_template("temp.html", page_title="What is Monero?")
+        _fname = request.form.get("fname")
+        _lname = request.form.get("lname")
+        _email = request.form.get("email")
+        _mobile = request.form.get("mobile")
+        _message = request.form.get("message")
+        
+        #move to database
+
+        conn = sqlite3.connect("user_db")
+        c = conn.cursor()
+        c.execute("INSERT INTO users VALUES (:fname, :lname, :email, :mobile, :message)", {'fname': _fname, 'lname': _lname, 'email': _email, 'mobile': _mobile, 'message': _message})
+        conn.commit()
+        conn.close()
+
+        return render_template("newsletter.html", page_title="What is Monero?")
 
     except Exception:
-        # something bad happended. Return an error page and a 500 error
         error_code = 500
         return render_template("error.html", page_title="What is Monero?")
 

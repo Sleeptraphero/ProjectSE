@@ -390,6 +390,56 @@ p{
 }
 /*<---Newsletter Form ||  */
 
+/* || Newsletter Page ---> */
+.newsl-banner{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+}
+.newsl-banner .newsl-imgSidebar{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500px;
+	height: 100%;
+}
+.newsl-banner .newsl-imgSidebar img{
+	position: absolute;
+	top: 470;
+	left: 100;
+	height: 30%;
+	object-fit: cover;
+}
+.newsl-banner .newsl-contentBx .newsl-sidebar{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: calc(100% - 590px);
+	height: 100%;
+	justify-content:center;
+	align-items: center;
+	padding: 100px;
+}
+.newsl-contentBx{
+	text-align: center;
+	padding-top: 350px;
+}
+.newsl-banner .newsl-contentBx h2{
+	position: relative;
+	color: #f26500;
+	font-size: 1.8em;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.newsl-banner .newsl-contentBx h4{
+	text-align: center;
+
+}
+.newsl-banner .newsl-contentBx p{
+	text-align: center;
+}
+/* <--- Newsletter Page || */
 /* FAQ */
 .faq-banner{
 	position: relative;
