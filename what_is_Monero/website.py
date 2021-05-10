@@ -24,8 +24,7 @@ def create_user():
         _mobile = request.form.get("mobile")
         _message = request.form.get("message")
         
-        #move to database
-
+        #move to database & adjusted to be injection save
         conn = sqlite3.connect("user_db")
         c = conn.cursor()
         c.execute("INSERT INTO users VALUES (:fname, :lname, :email, :mobile, :message)", {'fname': _fname, 'lname': _lname, 'email': _email, 'mobile': _mobile, 'message': _message})
