@@ -22,7 +22,7 @@ You should have:
 
 
 ## IMPORTANT! Every time you restart your computer or reopen VSCode, you'll have to do a few things. 
-These instructions are for a Bash shell on windows. For other shells can be found online. 
+These instructions are for a Bash shell on windows. Instructions for other shells can be found online. 
 
 - Activate your virtual environment for this project: 
    
