@@ -7,15 +7,7 @@ import sqlite3
 
 app = Flask(__name__)
 app.config.from_pyfile("config.py")
-# local test file
-app.config['DATABASE_FILE'] = 'what_is_monero/database/user_db'
-# copys the exisiting database to a temp directory on app engine
-if getenv('GAE_ENV', '').startswith('standard'):
-    app_engine_path = "/tmp/user_db"
-    copyfile(app.config['DATABASE_FILE'], app_engine_path)
-    app.config['DATABASE_FILE'] = app_engine_path
-else:
-    pass
+
 
 
 @app.route('/')

@@ -4,7 +4,6 @@ You should have:
 - Python 3.8.x installed on your computer 
 - Visual Studio Code (or another IDE of your choosing) installed on your computer 
 - A GitHub account
-- requierments.txt contains all packages you need (except virtualenv)-> `pip install -r requirements.txt`
 
 ## 2. Setup virtual enviorment and flask
 
@@ -13,9 +12,9 @@ You should have:
 
     `pip -h`
 
-- Install the virtualenv package:
+- Install the requirements.txt which includes virtualenv package:
 
-    `pip install virtualenv`
+    `pip install -r requirements.txt`
 
 - To create a virtual environment, you must specify a path. For example to create one in the local directory called ‘mypython’:
 
