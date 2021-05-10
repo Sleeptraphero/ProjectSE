@@ -34,7 +34,7 @@ def create_user():
         _message = request.form.get("message")
         
         #move to database & adjusted to be injection save
-        conn = sqlite3.connect("what_is_Monero/data/user_db")
+        conn = sqlite3.connect("DATABASE_FILE")
         c = conn.cursor()
         c.execute("INSERT INTO users VALUES (:fname, :lname, :email, :mobile, :message)", {'fname': _fname, 'lname': _lname, 'email': _email, 'mobile': _mobile, 'message': _message})
         conn.commit()

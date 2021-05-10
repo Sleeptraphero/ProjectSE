@@ -18,7 +18,6 @@ function smoothScroll(target){
         window.location.replace("/")
     }
 }
-
 function validateForm(){
 	var fname = document.forms["newsltForm"]["fname"].value;
     var lname = document.forms["newsltForm"]["lname"].value;
@@ -34,8 +33,6 @@ function validateForm(){
         document.getElementById('error-email').innerHTML = " Please enter your email adress *";      
     }
     if(fname.length<1 || lname.length<1 || email.length<1){
-        alert("You've successfully subscribed to our Newsletter")
        	return false;
     }            
 }
-
