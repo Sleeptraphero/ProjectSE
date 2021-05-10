@@ -12,7 +12,7 @@ app.config['DATABASE_FILE'] = "what_is_Monero/data/user_db"
 if getenv('GAE_ENV', '').startswith('standard'):
     app_engine_path = "/tmp/user_db"
     copyfile(app.config['DATABASE_FILE'], app_engine_path)
-    app.config['DATABASE_FILE'] = app_engine_pathg
+    app.config['DATABASE_FILE'] = app_engine_path
 else:
     pass
 
