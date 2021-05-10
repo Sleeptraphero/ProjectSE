@@ -5,11 +5,6 @@ function toggleMenu(){
     sidebar.classList.toggle('active');
 }
 
-function darkMode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-  }
-
 function smoothScroll(target){
     var element = document.getElementById(target)
     if(typeof(element) != 'undefined' && element != null){
@@ -18,6 +13,7 @@ function smoothScroll(target){
         window.location.replace("/")
     }
 }
+
 function validateForm(){
 	var fname = document.forms["newsltForm"]["fname"].value;
     var lname = document.forms["newsltForm"]["lname"].value;
@@ -36,4 +32,3 @@ function validateForm(){
        	return false;
     }            
 }
-

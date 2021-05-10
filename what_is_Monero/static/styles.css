@@ -9,7 +9,6 @@
 	width: 100%;
 	margin: 0 auto;
 }
-
 /* || Navigation Bar---> */
 header{
 	background: #f26500;
@@ -32,6 +31,9 @@ nav li {
 	margin-left: 70px;
 	padding-top: 23px;
 	position: relative;
+	animation: fadeInAnimation ease 2s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 nav a {
 	color: #333;
@@ -89,6 +91,10 @@ section{
 	position: relative;
 	width: 100%;
 	min-height: 100vh;
+	color: #fff;
+	animation: fadeInAnimation ease 2s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 .banner .imgSidebar{
 	position: absolute;
@@ -115,7 +121,7 @@ section{
 	align-items: center;
 	padding: 100px;
 }
-.banner .contentBx {
+.banner .contentBx{
 	top: 0;
 }
 .banner .contentBx h4{
@@ -132,6 +138,7 @@ p{
 	font-size: 1.1em;
 	margin: 20px 0;
 	font-weight: 300;
+	color: #333;
 }
 .btn{
 	background: #f26500;
@@ -244,7 +251,7 @@ p{
 .intro .content{
 	display: flex;
 	justify-content: space-between;
-	margin-top: 40px;
+	margin-top: -75px;
 }
 .intro .content .textBx{
 	min-width: 49%;
@@ -361,7 +368,7 @@ p{
 	border: 2px solid #f26500;
 	border-radius: 1mm;
 }
-/*<---Newsletter Form ||  */
+/*<---Newsletter Form || */
 
 /* || Newsletter Page ---> */
 .newsl-banner{
@@ -407,13 +414,13 @@ p{
 }
 .newsl-banner .newsl-contentBx h4{
 	text-align: center;
-
 }
 .newsl-banner .newsl-contentBx p{
 	text-align: center;
 }
 /* <--- Newsletter Page || */
-/* FAQ */
+
+/* || FAQ --->*/
 .faq-banner{
 	position: relative;
 	width: 100%;
@@ -432,16 +439,20 @@ p{
 	left: 100;
 	height: 30%;
 	object-fit: cover;
+	animation: fadeInAnimation ease 2s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
-.faq-banner .faq-contentBx,.faq-sidebar{
+.faq-banner .faq-contentBx, .faq-sidebar{
 	position: absolute;
 	top: 0;
 	right: 0;
 	width: calc(100% - 590px);
-	height: 100%;
+	height: 70%;
 	justify-content:center;
 	align-items: center;
 	padding: 100px;
+	margin-top: 250px;
 }
 .faq-banner .faq-contentBx h2{
 	position: relative;
@@ -456,14 +467,15 @@ p{
 }
 .faq-banner .faq-contentBx .accordion {
 	background-color: #eee;
-	color: #444;
+	color: #333;
 	cursor: pointer;
 	padding: 18px;
 	width: 100%;
 	border: none;
-	text-align: left;
+	text-align: center;
 	outline: none;
-	font-size: 15px;
+	font-size: 20px;
+	font-weight: 500;
 	transition: 0.4s;
 	font-family: "Poppins";
 }
@@ -472,8 +484,7 @@ p{
 }
 .faq-banner .faq-contentBx .accordion:after {
 	content: '\002B';
-	color: #777;
-	font-weight: bold;
+	color: #333;
 	float: right;
 	margin-left: 5px;
 }
@@ -485,7 +496,7 @@ p{
 	background-color: white;
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.2s ease-out;
+	transition: max-height 0.5s ease-out;
 	border: 1px #f26500 solid;
 }
 .faq-banner .faq-contentBx .panel ul{
@@ -504,10 +515,19 @@ p{
 .faq-banner .faq-contentBx .panel ol h3{
 	text-align: center;
 }
-/* FAQ */
-/* AlertBtn */
+.faq-banner .faq-contentBx .panel ul li{
+	list-style: none;
+}
+/*<--- FAQ ||*/
 
-/* AlertBtn */
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 @media (max-width: 991px){
 	.banner .imgSidebar{
 		display: none;
@@ -516,14 +536,8 @@ p{
 		width: 100%;
 		padding: 40px;
 	}
-	.logoText{
-		left: 40px;
-	}
 	.toggle{
 		right: 40px;
-	}
-	.sci{
-		left: 40px;
 	}
 	section{
 		padding: 40px;

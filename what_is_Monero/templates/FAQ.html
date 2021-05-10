@@ -4,7 +4,7 @@
 <body>
     <section class="faq-banner" id="faq-home">
         <div class="faq-imgSidebar">
-          <img src="https://lh3.googleusercontent.com/pw/ACtC-3dCPrkK7u8S1eJqjaYVwE_oOBjHNjXFxya73nvES_8_oKn2q5vHgf9VO8dbAz4tr9R0wRibo3Y_KJPqKXSd7qu9kxkursTvqpWvzflqBY8Sv_IMi3k_4Tbgtl9HKoB252NSY81BXjXFoWihv2Nsm_ms=w266-h270-no?authuser=0">
+          <img src="https://lh3.googleusercontent.com/pw/ACtC-3dCPrkK7u8S1eJqjaYVwE_oOBjHNjXFxya73nvES_8_oKn2q5vHgf9VO8dbAz4tr9R0wRibo3Y_KJPqKXSd7qu9kxkursTvqpWvzflqBY8Sv_IMi3k_4Tbgtl9HKoB252NSY81BXjXFoWihv2Nsm_ms=w266-h270-no?authuser=0" alt="Monero Logo"> 
         </div>
         <div class="faq-contentBx">
           <h2>FAQ</h2>
@@ -21,7 +21,7 @@
               <h3>Wallet</h3>
               <p>
                 A wallet is a physical medium, device, program or service used by cryptocurrency holders to store (multiple) public and/or private keys.
-                Wallets are used to track ownership and to receive and spend cryptocurrencies. The cryptocurrency itself is not “contained” inside a wallet - the wallet interacts with the blockchain to access the coins.
+                Wallets are used to track ownership and to receive and spend cryptocurrencies. The cryptocurrency itself is not “contained” inside a wallet - the wallet only holds the keys which are neccessary to access the coins within the blockchain.
               </p>
             </li>
             <li>
@@ -36,7 +36,7 @@
             <ol>
               <li>
                 <h3>Blocks</h3>
-                <p>A block is a container of transactions, with a new block being added to the blockchain once every 2 minutes. Blocks are created through the process of mining, and the node that successfully mines the block then broadcasts it to each of the nodes connected to it, who subsequently re-broadcast the block until the entire Monero network has received it.
+                <p>A block is a container of transactions. Blocks are created through the process of mining, and the node that successfully mines the block then broadcasts it to each of the nodes connected to it, who subsequently re-broadcast the block until the entire Monero network has received it.
               </p>
             </li>
             <li>
@@ -46,9 +46,26 @@
             </li>
             <li>
               <h3>Monero's Blockchain</h3>
-              <p>Unlike Bitcoin and other cryptocurrencies, transactions in the Monero blockchain do not reveal where funds came from or went to, providing anonymity and making the currency completely fungible.
+              <p>
+                Unlike Bitcoin and other cryptocurrencies, transactions in the Monero blockchain do not reveal where funds came from or went to, providing anonymity and making the currency completely fungible.
               </p>
             </li>
+            </ol>
+          </div>
+          <button class="accordion">Purchasing Monero</button>
+          <div class="panel">
+            <ol>
+              <li>
+                <h3>Where can I buy XMR?</h3>
+                <p>There are multiple ways to acquire Monero: You can mine it, you can exchange services or goods for it, or you can convert other cryptocurrencies and fiat money to XMR. If you choose the latter, the most convenient way to do it is to use an exchange.</p>
+              </li>
+              <li><h3>Which exchange to choose?</h3>
+                <p>There are multiple exchanges supporting Monero. Some are centralized, which usually have great liquidity and fast service, but requires you to provide personal information before starting the trade (KYC - Know your customer). Some are decentralized and don't require any identification, but usually have less volume and can be harder to use. There are also services that allow people to meet and perform a trade without third parties involved.</p></li>
+                <li>
+                  <h3>List of exchanges:</h3>
+                  <p>Exchanges with (KYC): <a href="https://www.kraken.com/">Kraken</a>
+                    <a href="https://www.coinbase.com/">Coinbase</a><a href="https://www.binance.com/">Binance</a></p><p>P2P no (KYC): <a href="https://localmonero.co/">Localmonero</a></p>
+                </li>
             </ol>
           </div>
           <button class="accordion">Mining Monero</button>
@@ -58,10 +75,8 @@
               <li><h3>Hash Rate</h3><p>
                 Mining is a time-based competition. Therefore, the higher the device's processing speed, the luckier and merrier the mining process would be. Here mining pools come into play an XMR mining pool comprises individual rig owners who combine their rigs' power to increase their chances of finding new blocks in the Monero blockchain. Block rewards go to those who contributed mining power towards finding a particular block.</p></li>
               <li><h3>Mining Rewards</h3>
-                <p>The current reward for verifying (mining)   1 transaction block is around 4.99 XMR, plus a transaction fee of 0.06573 XMR.
-                A Monero block is mined every 2 minutes, and we know that the current reward for mining transaction block is 4.99 XMR. So, by doing the simple math, we know that 1 XMR is mined every 24 seconds.</p>
+                <p>The current reward for verifying (mining) 1 transaction block is around 4.99 XMR, plus a transaction fee of 0.06573 XMR. So, by doing the simple math, we know that 1 XMR is mined every 24 seconds.</p>
               </li>
-              <li></li>
             </ol>
           </div>
           <button class="accordion">Nodes</button>
@@ -87,16 +102,31 @@
                 <p>To obfuscate the sender’s identity, when he or she signs a Monero transaction, their signature is combined with past signatures from the Monero blockchain. These act as decoys and make it impossible for an outside observer to determine who actually sent the transaction.</p>
               </li>
               <li><h3>Obfuscating the amount sent</h3>
-                <p>The amount being sent is obfuscated by ring confidential transaction or ringCT for short. I won’t go into the technical aspect of how ringCT works, but suffice to say that instead of broadcasting the actual amount being sent, the user transmits only a small random looking piece of information. This information is enough to verify that the amount being sent is legit while keeping the actual amount private.</p></li>
+                <p>The amount being sent is obfuscated by ring confidential transaction or ringCT for short. Which means in a simplyfied way that instead of broadcasting the actual amount being sent, the user transmits only a small random looking piece of information. This information is enough to verify that the amount being sent is legit while keeping the actual amount private.</p></li>
                 <li>
                   <h3>Obfuscating the receiver</h3>
                   <p>Finally, we want to obfuscate the receiver. This is done through the use of stealth addresses. A public Monero address is a 95 character string that starts with a 4. However, when I send funds to that address the funds are actually sent to a different address.</p>
                 </li>
             </ol>
           </div>
+          <button class="accordion">Fungibility</button>
+          <div class="panel">
+            <ol>
+              <li>
+                <h3>Definiton</h3>
+                <p>Fungibility is an important property of money. It simply states that two people should be able to exchange equal value (eg: 1 XMR for 1 XMR) without either party losing out.</p>
+              </li>
+              <li><h3>Compared to Bitcoin</h3>
+                <p>Fungibility is an advantage Monero has over Bitcoin and almost every other cryptocurrency, due to the privacy inherent in the Monero blockchain and the permanently traceable nature of the Bitcoin blockchain. With Bitcoin, any BTC can be tracked, therefore if a coin has been used for an illegal purpose in the past, this history will be contained in the blockchain forever. This lack of fungibility means that certain businesses will be obligated to avoid accepting BTC that have been previously used for purposes which are illegal, or simply run afoul of their Terms of Service.</p></li>
+                <li>
+                  <h3>Why Monero is better</h3>
+                  <p>Monero has been built specifically to address the problem of traceability and non-fungibility inherent in other cryptocurrencies. By having completely private transactions Monero is truly fungible and there can be no blacklisting of certain XMR.
+                  </p>
+                </li>
+            </ol>
+          </div>
         </div>
       </section>
-
     <script>
       var acc = document.getElementsByClassName("accordion");
       var i;
@@ -114,5 +144,6 @@
       }
     </script>
 </body>
+
 
 {% endblock %}  
