@@ -7,8 +7,14 @@ import sqlite3
 
 app = Flask(__name__)
 app.config.from_pyfile("config.py")
+app.config['DATABASE_FILE'] = "what_is_Monero/data/user_db"
 
-
+if getenv('GAE_ENV', '').startswith('standard'):
+    app_engine_path = "/tmp/user_db"
+    copyfile(app.config['DATABASE_FILE'], app_engine_path)
+    app.config['DATABASE_FILE'] = app_engine_pathg
+else:
+    pass
 
 @app.route('/')
 def index():
@@ -28,7 +34,7 @@ def create_user():
         _message = request.form.get("message")
         
         #move to database & adjusted to be injection save
-        conn = sqlite3.connect("what_is_monero/database/user_db")
+        conn = sqlite3.connect("what_is_Monero/data/user_db")
         c = conn.cursor()
         c.execute("INSERT INTO users VALUES (:fname, :lname, :email, :mobile, :message)", {'fname': _fname, 'lname': _lname, 'email': _email, 'mobile': _mobile, 'message': _message})
         conn.commit()
